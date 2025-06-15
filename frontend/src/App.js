@@ -75,8 +75,8 @@ function App() {
   const handleTabChange = idx => setActiveTab(idx);
 
   return (
-    <div className="app flex bg-background dark:bg-[#181826] min-h-screen">
-      {/* Sidebar */}
+    <div className="app flex flex-col md:flex-row bg-background dark:bg-[#181826] min-h-screen w-full">
+      {/* Sidebar - responsive drawer */}
       <Sidebar
         isMobileOpen={sidebarOpen}
         toggleMobile={toggleSidebar}
@@ -89,16 +89,16 @@ function App() {
         <Header onMenuClick={toggleSidebar} />
 
         {/* Page content */}
-        <main className="flex-1 w-full pt-6 px-4 md:pl-0 md:ml-0 max-w-5xl mx-auto">
-          <div className="py-8">
+        <main className="flex-1 w-full pt-5 sm:pt-6 px-2 sm:px-4 md:pl-0 md:ml-0 max-w-3xl md:max-w-5xl mx-auto transition-all">
+          <div className="py-5 sm:py-8">
             <div className="mb-2">
-              <div className="subtitle text-accent text-lg font-semibold tracking-wide mb-2">
+              <div className="subtitle text-accent text-base sm:text-lg font-semibold tracking-wide mb-2">
                 {tabContent[activeTab].subtitle}
               </div>
-              <h1 className="title font-bold text-3xl md:text-5xl text-primary mb-1 leading-tight">
+              <h1 className="title font-bold text-2xl sm:text-3xl md:text-5xl text-primary mb-1 leading-tight">
                 {tabContent[activeTab].title}
               </h1>
-              <div className="description mb-6 text-text-secondary text-md md:w-3/4">
+              <div className="description mb-6 text-text-secondary text-sm sm:text-md md:w-3/4">
                 {tabContent[activeTab].desc}
               </div>
               <div>{tabContent[activeTab].action}</div>

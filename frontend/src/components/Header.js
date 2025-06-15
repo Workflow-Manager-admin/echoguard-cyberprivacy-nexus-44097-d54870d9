@@ -14,25 +14,29 @@ export default function Header({ onMenuClick }) {
   const isSynced = true;
 
   return (
-    <header className="flex items-center justify-between gap-4 px-4 py-3 border-b border-border bg-background dark:bg-[#181826] z-20 md:pl-72">
+    <header className="flex items-center justify-between gap-2 px-2 sm:px-4 py-3 border-b border-border bg-background dark:bg-[#181826] z-20 md:pl-72 w-full sticky top-0">
       {/* Hamburger for mobile */}
-      <div className="md:hidden flex items-center mr-2">
-        <button aria-label="Toggle sidebar" onClick={onMenuClick}
-          className="p-2 rounded-md hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent">
+      <div className="md:hidden flex items-center mr-1">
+        <button
+          aria-label="Toggle sidebar"
+          onClick={onMenuClick}
+          className="p-2 rounded-md hover:bg-accent/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition"
+          tabIndex={0}
+        >
           <svg width="24" height="24" fill="none" stroke="currentColor" className="text-primary">
             <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </button>
       </div>
-      {/* Brand (hidden on desktop, visible on mobile) */}
-      <div className="flex md:hidden items-center gap-2">
+      {/* Brand (visible on mobile, visually hidden on desktop) */}
+      <div className="flex md:hidden items-center gap-2 flex-shrink-0">
         <span className="h-8 w-8 rounded-full flex items-center justify-center bg-primary text-white text-xl font-bold shadow-lg">Ξ</span>
         <span className="text-xl font-extrabold tracking-tight text-primary">EchoGuard</span>
       </div>
-      {/* Spacer */}
-      <div className="flex-1" />
+      {/* Spacer for desktop right alignment */}
+      <div className="flex-1 min-w-[8px]" />
       {/* Main controls */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 sm:gap-4">
         {/* Notification Bell */}
         <motion.button
           aria-label="Notifications"
