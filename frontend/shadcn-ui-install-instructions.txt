@@ -1,0 +1,6 @@
+# To install shadcn/ui once Tailwind is configured, run:
+# npx shadcn-ui@latest init
+
+# After Tailwind installation, check tailwind.config.js and follow up with:
+# npx shadcn-ui@latest add button card dialog
+# This file is for local development workflow reference. Please remove after installing.

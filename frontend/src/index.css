@@ -1,0 +1,41 @@
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base resets and coding styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background: #121212;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* EchoGuard Custom Classes for Brand Colors */
+.bg-primary { background-color: #8A2BE2; }
+.bg-secondary { background-color: #00FF7F; }
+.bg-accent { background-color: #00BFFF; }
+.text-primary { color: #8A2BE2; }
+.text-secondary { color: #00FF7F; }
+.text-accent { color: #00BFFF; }
+
+/* Dark mode base */
+.dark body {
+  background: #121212;
+  color: #fff;
+}
+
+/* ShadCN UI and Framer Motion will add more styles */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

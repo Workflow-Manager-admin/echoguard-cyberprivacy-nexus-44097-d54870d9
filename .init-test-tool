@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/echoguard-cyberprivacy-nexus-44097-d54870d9/frontend"
+}
